@@ -134,7 +134,8 @@ IDR_ESTEIDSHLEXT        REGISTRY                "EsteidShlExt.rgs"
 // Bitmap
 //
 
-IDB_DIGIDOCBMP          BITMAP                  "resources\\digidoc.bmp"
+IDB_DIGIDOCBMP_16       BITMAP                  "resources\\digidoc_16.bmp"
+IDB_DIGIDOCBMP_24       BITMAP                  "resources\\digidoc_24.bmp"
 #endif    // Estonian resources
 /////////////////////////////////////////////////////////////////////////////
 

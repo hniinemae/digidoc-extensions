@@ -6,8 +6,15 @@
 
 CEsteidShlExt::CEsteidShlExt()
 {
+	HDC screen = GetDC(nullptr);
+	double horzRes = GetDeviceCaps(screen, HORZRES);
+	double deskHorzRes = GetDeviceCaps(screen, DESKTOPHORZRES);
+    ReleaseDC(nullptr, screen);
+	 
+	int digidocBmpId = ((int)(96 * deskHorzRes / horzRes) > 96) ? IDB_DIGIDOCBMP_24 : IDB_DIGIDOCBMP_16;
+
 	m_DigidocBmp = LoadBitmap(_AtlBaseModule.GetModuleInstance(),
-	                           MAKEINTRESOURCE(IDB_DIGIDOCBMP));
+                               MAKEINTRESOURCE(digidocBmpId));
 }
 
 CEsteidShlExt::~CEsteidShlExt()
